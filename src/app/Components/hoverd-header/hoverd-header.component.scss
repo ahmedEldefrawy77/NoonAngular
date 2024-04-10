@@ -1,0 +1,35 @@
+
+ .electronics-dropdown{
+    width: 24vw;
+   height: auto;
+ }
+  .dropdown-header{
+    border-bottom: solid 1px rgb(229, 228, 228);
+    text-align: start;
+  }
+  .dropdown-header h3{
+    font-weight: 600;
+  }
+  .electronics-dropdown-nav{
+    width: 100%;
+  }
+  .electronics-dropdown-nav> :first-child{
+  border-right: 1px solid rgb(239, 239, 239);
+  }
+  .electronics-dropdown-nav ul{
+    width: 50%;
+  }
+  .electronics-dropdown-nav ul li{
+    list-style: none;
+    cursor: pointer;
+  }
+  .electronics-dropdown-nav ul li h4	{
+   width: 50%;
+   text-align: start;
+   font-size: 13px;
+   font-weight: 600;
+  }
+  
+   .electronics-dropdown-nav ul li {
+    text-align: start;
+   }

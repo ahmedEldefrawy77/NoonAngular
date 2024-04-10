@@ -1,0 +1,21 @@
+<div class="electronics-dropdown" >
+    <div class="dropdown-header">
+        <h3 class="pt-4 ps-3">{{CategoryName}}</h3>
+    </div>
+    <div class="d-flex electronics-dropdown-nav pt-3 ">
+        <ul class="mostpopular-sec">
+            <li>
+                <h4>Most Popular</h4>
+            </li>
+            <li *ngFor="let supcat of supcategory">{{supcat.name}}</li>
+            
+        </ul>
+        <ul class="topbrand-sec">
+            <li>
+                <h4>Top Brands</h4>
+            </li>
+            <li *ngFor="let brand of Brands" >{{brand.name}}</li>
+            
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,118 @@
+footer{
+    padding-right: 0;
+    width: 100%;
+    background-color: white;
+    border-top:1px solid var(--color-grey-3);
+    margin-top: 5px;
+}
+h4{
+    font-weight: 800;
+}
+#callicon,
+#emailicon,
+#infoicon{
+    margin-top: 10%;
+}
+.reachout p{
+    font-size: 11px;
+    color: gray;
+}
+h5{
+    font-size: 14px;
+    font-weight: 500;
+}
+.footer-container
+{
+    justify-content: center;
+    justify-content: space-between;
+    border-top: 1px solid var(--color-grey-3);
+    margin-top: 1%;
+    padding-top:1% ;
+    
+}
+.footer-container .speed-reach-out
+{
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 75%;
+    
+}
+.helpcenter
+{
+   display: flex;
+   flex-wrap: wrap; 
+}
+.help{ 
+    border-radius: 5px;
+}
+
+.info-container{
+    display: flex;
+    justify-content: space-between;
+    max-height: 25%;
+    padding: 10px 0;
+
+}
+
+.info-container .helpcenter{
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper{ 
+    width: 30px;
+    height: 30px;
+    background-color: var(--color-noon-yellow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+svg{
+    margin-top: 10%;
+}
+
+// shopping section
+.shoppingicons h5{
+    text-align: center;
+}
+
+.shoppingicons .d-flex{
+    justify-content: center;
+}
+
+.shopping-wrapper{
+    background-color: var( --color-grey-3);
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.shopping-wrapper a{
+    text-decoration: none;
+    color: black;
+}
+
+.shopping-wrapper h5{
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+// connect section
+
+.connect h5{
+   text-align: center;
+}
+
+.connect .d-flex{
+    justify-content: center;
+}
+.designedby h4{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:gray;
+    font-weight: 900;
+
+}
+
+

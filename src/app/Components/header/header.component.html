@@ -1,0 +1,267 @@
+<nav class="navbar navbar-expand-sm d-flex ">
+    <a routerLink="/Home"><img class="ms-2 " src={{wepInfo.image}} alt="Noon icon"></a>
+    <ul class="navbar-nav nav-left nav me-2">
+        <li class="nav-item active mx-3 ">
+            <a class="nav-link" href="#">Adress<span class="sr-only">(current)</span></a>
+        </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0 me-2">
+        <input class="form-control mr-sm-2" type="search" placeholder="What are you looking for?" aria-label="Search">
+    </form>
+    <div class="d-flex collapsable-n ">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav nav-right ms-auto">
+                <li class="nav-item login mb-1 ">
+                    <button class="nav-link  ms-3 me-2 p-0 d-flex " type="button" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal"> LogIn
+                        <i class="material-symbols-outlined mr-3 ms-2 pe-2 mx-1  " id="logicon">person</i>
+                    </button>
+
+                </li>
+                <li class="nav-item wishlist mb-1 ">
+                    <a class="nav-link  ms-3 me-2 p-0 d-flex " href="#">Wishlist
+                        <i class="material-symbols-outlined mr-3 ms-0 pe-2 mx-1 " id="wishicon">favorite</i>
+                    </a>
+
+                </li>
+                <li class="nav-item cart">
+                    <a class="nav-link ms-3 me-2 p-0 d-flex" href="/Shop">Cart
+                        <i class="material-symbols-outlined mx-1 " id="shoppingicon">shopping_cart</i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+    </div>
+
+
+</nav>
+<div class="sup-nav d-flex">
+    <ul class="d-flex sup-nav-ul p-0 m-0 px-1 ">
+        <li class="sup-nav-categories hover-over d-flex ps-5 m-0 ">
+            <a href="">All Categories</a>
+
+            <ul class="dropdown-1">
+                <li *ngFor="let cat of categories" class="electronics-hover-over"
+                appHoverCategory [categoryName]="categoryName"
+                (categoryNameChange)="getallBrands($event)">
+                    <a routerLink="/Electronics">{{cat.name}}</a>
+                    <app-hoverd-header [CategoryName]="cat.name"></app-hoverd-header>  
+                </li>
+            </ul>
+        </li>
+        <li class="sup-nav-electronics py-1 m-0 ele-hover-over ">
+            <a routerLink="Electronics" class="mx-1 ">electronics</a>
+            <div class="dropdown-ele">
+                <div class="ele-supnav-dropdown d-flex ">
+                    <div class="ele25">
+                        <ul>
+                            <li>Electronics</li>
+                            <li>Element 1</li>
+                            
+                        </ul>
+                    </div>
+                    <div class="ele75">
+                        <h3 class="ps-2 ">Top Brands</h3>
+                        <div class="d-flex img-container">
+                            <a href=""><img
+                                    src="https://z.nooncdn.com/cms/pages/20210408/9852ea7d5c33973a1761053b129a047b/drop-brand-06.png"
+                                    alt=""></a>
+                            <a href=""><img
+                                    src="https://z.nooncdn.com/cms/pages/20210408/9852ea7d5c33973a1761053b129a047b/drop-brand-09.png"
+                                    alt=""></a>
+                            <a href=""><img
+                                    src="https://z.nooncdn.com/cms/pages/20210408/9852ea7d5c33973a1761053b129a047b/drop-brand-03.png"
+                                    alt=""></a>
+                        </div>
+                        <div class="d-flex img-container my-4">
+                            <a href=""><img
+                                    src="https://z.nooncdn.com/cms/pages/20210408/9852ea7d5c33973a1761053b129a047b/drop-brand-01.png"
+                                    alt=""></a>
+                            <a href=""><img
+                                    src="	https://z.nooncdn.com/cms/pages/20210408/9852ea7d5c33973a1761053b129a047b/drop-brand-08.png"
+                                    alt=""></a>
+                            <a href=""><img
+                                    src="https://z.nooncdn.com/cms/pages/20210408/9852ea7d5c33973a1761053b129a047b/drop-brand-04.png"
+                                    alt=""></a>
+                        </div>
+                        <div class="d-flex img-container mb-4 ">
+                            <a href=""><img
+                                    src="https://z.nooncdn.com/cms/pages/20210408/9852ea7d5c33973a1761053b129a047b/drop-brand-05.png"
+                                    alt=""></a>
+                            <a href=""><img
+                                    src="https://z.nooncdn.com/cms/pages/20210408/9852ea7d5c33973a1761053b129a047b/drop-brand-02.png"
+                                    alt=""></a>
+                            <a href=""><img
+                                    src="https://a.nooncdn.com/cms/pages/20210725/16e8652696b98e99147acca517cc2c76/drop-brand-10.png"
+                                    alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="sup-nav-mobiles py-1 m-0 mobiles-hover-over">
+            <a routerLink="/Mobiles">mobiles</a>
+
+            <div class="dropdown-mobiles">
+                <div class="mobiles-supnav-dropdown d-flex ">
+                    <div class="ele25">
+                        <ul>
+                            <li>Mobiles</li>
+                            <li>Element 1</li>
+                            <li>Element 2</li>
+                            <li>Element 3</li>
+                            <li>Element 4</li>
+                            <li>Element 5</li>
+                            <li>Element 6</li>
+                        </ul>
+                    </div>
+                    <div class="ele75">
+                        <h3 class="ps-2 ">Top Brands</h3>
+                        <div class="d-flex img-container">
+                            <a href=""><img
+                                    src="https://z.nooncdn.com/cms/pages/20210408/9852ea7d5c33973a1761053b129a047b/drop-brand-06.png"
+                                    alt=""></a>
+                            <a href=""><img
+                                    src="https://z.nooncdn.com/cms/pages/20210410/2a23ead9569718f23f16e78305f07230/drop-brand-02.png"
+                                    alt=""></a>
+                            <a href=""><img
+                                    src="https://z.nooncdn.com/cms/pages/20210410/2a23ead9569718f23f16e78305f07230/drop-brand-03.png"
+                                    alt=""></a>
+                        </div>
+                        <div class="d-flex img-container my-4">
+                            <a href=""><img
+                                    src="https://z.nooncdn.com/cms/pages/20210410/2a23ead9569718f23f16e78305f07230/drop-brand-04.png"
+                                    alt=""></a>
+                            <a href=""><img
+                                    src="https://z.nooncdn.com/cms/pages/20210410/2a23ead9569718f23f16e78305f07230/drop-brand-05.png"
+                                    alt=""></a>
+                            <a href=""><img
+                                    src="https://z.nooncdn.com/cms/pages/20210410/2a23ead9569718f23f16e78305f07230/drop-brand-06.png"
+                                    alt=""></a>
+                        </div>
+                        <div class="d-flex img-container mb-4 ">
+                            <a href=""><img
+                                    src="https://z.nooncdn.com/cms/pages/20210410/2a23ead9569718f23f16e78305f07230/drop-brand-07.png"
+                                    alt=""></a>
+                            <a href=""><img
+                                    src="https://z.nooncdn.com/cms/pages/20210410/2a23ead9569718f23f16e78305f07230/drop-brand-08.png"
+                                    alt=""></a>
+                            <a href=""><img
+                                    src="https://z.nooncdn.com/cms/pages/20210410/2a23ead9569718f23f16e78305f07230/drop-brand-09.png"
+                                    alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="sup-nav-laptops py-1 m-0 laptops-hover-over"><a routerLink="">laptops</a>
+            <div class="dropdown-laptops">
+                <div class="laptops-supnav-dropdown d-flex ">
+                    <div class="ele25">
+                        <ul>
+                            <li>Laptops</li>
+                            <li>Element 1</li>
+                            <li>Element 2</li>
+                            <li>Element 3</li>
+                            <li>Element 4</li>
+                            <li>Element 5</li>
+                            <li>Element 6</li>
+                        </ul>
+                    </div>
+                    <div class="ele75">
+                        <h3 class="ps-2 ">Top Brands</h3>
+                        <div class="d-flex img-container">
+                            <a href=""><img
+                                    src="https://z.nooncdn.com/cms/pages/20210408/9852ea7d5c33973a1761053b129a047b/drop-brand-06.png"
+                                    alt=""></a>
+                            <a href=""><img
+                                    src="https://z.nooncdn.com/cms/pages/20210408/9852ea7d5c33973a1761053b129a047b/drop-brand-09.png"
+                                    alt=""></a>
+                            <a href=""><img
+                                    src="https://z.nooncdn.com/cms/pages/20210408/9852ea7d5c33973a1761053b129a047b/drop-brand-01.png"
+                                    alt=""></a>
+                        </div>
+                        <div class="d-flex img-container my-4">
+                            <a href=""><img
+                                    src="https://a.nooncdn.com/cms/pages/20210725/16e8652696b98e99147acca517cc2c76/drop-brand-10.png"
+                                    alt=""></a>
+                            <a href=""><img
+                                    src="	https://z.nooncdn.com/cms/pages/20210408/9852ea7d5c33973a1761053b129a047b/drop-brand-08.png"
+                                    alt=""></a>
+                            <a href=""><img
+                                    src="https://z.nooncdn.com/cms/pages/20210408/9852ea7d5c33973a1761053b129a047b/drop-brand-04.png"
+                                    alt=""></a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="sup-nav-cameras py-1 m-0 cameras-hover-over" ><a href="">cameras</a>
+            <div class="dropdown-cameras">
+                <div class="cameras-supnav-dropdown d-flex ">
+                    <div class="ele25">
+                        <ul>
+                            <li>Cameras</li>
+                            <li>Element 1</li>
+                            <li>Element 2</li>
+                            <li>Element 3</li>
+                            <li>Element 4</li>
+                            <li>Element 5</li>
+                            <li>Element 6</li>
+                        </ul>
+                    </div>
+                    <div class="ele75">
+                        <h3 class="ps-2 ">Top Brands</h3>
+                        <div class="d-flex img-container">
+                           
+                            <a href=""><img
+                                    src="https://z.nooncdn.com/cms/pages/20210408/9852ea7d5c33973a1761053b129a047b/drop-brand-02.png"
+                                    alt=""></a>
+                            <a href=""><img
+                                    src="https://z.nooncdn.com/cms/pages/20210408/9852ea7d5c33973a1761053b129a047b/drop-brand-03.png"
+                                    alt=""></a>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </li>
+        
+    </ul>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img src="https://lh3.googleusercontent.com/wc_ySX2JefckG8m3E4Jq7Xr4WbPGQrJap2a_2pX5mMAZmpVHIgEWS1IuseQe4XCeD0vttLjFIhf2Fu05Q_nUFl451ObCh3w_tgw5rA"
+                    alt="">
+
+            </div>
+            <div class="modal-body d-flex ">
+                <h5 style="font-size: large;">Hala! Let's get started.</h5>
+                <div class="d-flex tabs-holder mb-3 ">
+                    <div class="tabs-label d-inline lab-active px-2 m-1  ">
+                        <option value="Login" class="p-2 opt" appLoginRegisteration>Login</option>
+                    </div>
+                    <div class=" tabs-label d-inline px-2 m-1 ">
+                        <option value="Register" class="p-2 opt" appLoginRegisteration>Register</option>
+                    </div>
+                </div>
+                <form action="MEdo.com" method="POST" class="d-flex ">
+                    <input type="email" id="Email" class="email-input mb-2" placeholder="Please enter E-mail Address!">
+                    <input type="submit" class="btn-primary">
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>

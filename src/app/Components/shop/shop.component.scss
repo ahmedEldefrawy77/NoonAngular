@@ -1,0 +1,150 @@
+.image-e-commerce {
+    width: 10%;
+    height: 400px;
+
+}
+
+.image-selected {
+    width: 35%;
+
+}
+
+.product-details {
+    width: 50%;
+    border-left: 1px solid gray;
+}
+
+.img-prev {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+
+.img-slid {
+    width: 60px;
+    height: 30%;
+}
+
+.img-slid img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    cursor: pointer;
+  
+}
+
+.img-slid {
+    margin: auto;
+    display: block;
+    margin: 5px auto;
+}
+
+.image-selected {
+    height: 550px;
+    width: 330px;
+}
+
+.image-holder {
+    width: 90%;
+    height: 80%;
+    align-content: flex-start;
+}
+
+.image-holder img {
+    object-fit: contain;
+    width: 100%;
+}
+
+.img-prev img {
+    opacity: 0.6;
+}
+
+.img-prev .active {
+    border: 1px solid blue;
+    border-radius: 10px;
+}
+
+.img-prev .active img {
+    opacity: 1;
+}
+
+.brand{
+    font-size: 26px;
+    color: gray;
+}
+.details p{
+    color: gray;
+}
+.mid h5{
+    margin-left: 15px;
+    font-size: 24px;
+    font-weight: 600;
+}
+.prd-name{
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+.mid{
+    justify-content: space-between;
+}
+.prd-cnt-info h5{
+    color: rgb(163, 107, 3);
+    font-size: 20px;
+}
+.img-container{
+    width: 100%;
+    height: 16%;
+}
+.img-container img{
+    width: 100%;
+    height: 100%;
+    border-radius: 7px;
+}
+.delivery-info{
+    background-color: #e1e1e0;
+    border-radius: 7px;
+}
+.delivery-info .dlv-date{
+    font-size: 16px;
+    font-weight: 600;
+}
+.form-select{
+    width: 60px;
+}
+
+.add-to-cart{
+    width: 70%;
+    background-color: rgb(42, 42, 246);
+    border-radius: 7px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.add-to-cart h5{
+    color: white;
+    font-size: 15px;
+    margin: 10px auto;
+    font-weight: 600;
+    cursor: pointer;
+}
+.fav{
+    font-size: 40px;
+    color: var(--color-noon-yellow);
+    cursor: pointer;
+    background-color: black;
+    border-radius: 50%;
+    padding: 5px;
+    align-items: center;
+}
+.sperator{
+    width: 101%;
+    height: 10px;
+    padding:0;
+    margin: 0;
+    background-color: #e1e1e0;
+}
+.overview{
+    height: 500px;
+    background-color: black;
+}

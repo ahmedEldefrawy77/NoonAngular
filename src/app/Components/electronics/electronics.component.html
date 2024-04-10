@@ -1,0 +1,187 @@
+<div class="container-fluid adv-container d-flex mt-0 mb-5  ">
+    <div class="noon-card-img m-0">
+        <img src="https://f.nooncdn.com/mpcms/EN0003/assets/6339a048-93c8-4470-921f-4bbc1789cc98.png?format=avif"
+            alt="">
+
+    </div>
+    <div id="carouselExample" class="carousel slide first-slider ">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://f.nooncdn.com/mpcms/EN0003/assets/47fecc11-490d-4039-a1ca-8b8962640ea4.png?format=avif"
+                    class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://f.nooncdn.com/mpcms/EN0003/assets/5867a62d-afe8-4074-b520-66efdc9b6a28.png?format=avif"
+                    class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://f.nooncdn.com/mpcms/EN0003/assets/0b2af7bb-aaf9-476a-8b9a-fc35a42df2d2.gif?format=avif"
+                    class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+
+    </div>
+    <div class="bottom-slid">
+        <h3>Designed with all Love, enjoy.<br> Ahmed Eldafrawy</h3>
+    </div>
+</div>
+
+<div class="text-holder">
+    <h5>Best Deals</h5>
+</div>
+<div class="d-flex product-card-container">
+    <div class="d-flex cards-container">
+        <div *ngFor="let prd of bestDealsPrd" class="container-fluid product-holder m-3 first-prd">
+
+            <div class="container-fluid card-image-holder">
+                <div id="{{ 'carouselExampleIndicators1-' + prd.name }}" class="carousel slide">
+                    <div class="carousel-indicators">
+                        <!-- Add buttons for each image -->
+                        <button type="button" [attr.data-bs-target]="'#carouselExampleIndicators1-' + prd.name"
+                            [attr.data-bs-slide-to]="i" [class.active]="i === 0" aria-current="true"
+                            *ngFor="let img of prd.imagePath; let i = index"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div *ngFor="let img of prd.imagePath; let i = index" class="carousel-item" [class.active]="i === 0">
+                            <img [src]="img" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">{{ prd?.name }}</h4>
+              
+            </div>
+            <h4 class="card-price">{{prd.price.currency}}&nbsp;{{ prd?.price?.amount }}</h4>
+        </div>
+ 
+    </div>
+</div>
+<div class="category-holder p-2 mt-4 ">
+    <div class="d-flex InBetween mt-4 ">
+        <div class="text-holder">
+            <h5>TVs</h5>
+        </div>
+        <button type="button" class="btn btn-outline-primary btn-head-card mb-3 ">
+            Shop now
+        </button>
+    </div>
+    <div class="d-flex product-card-container">
+        <div class="d-flex cards-container">
+            <div *ngFor="let tele of televisions" class="container-fluid product-holder m-3">
+
+                <div class="container-fluid card-image-holder">
+                    <div id="carouselExampleIndicators" class="carousel slide">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div *ngFor="let img of tele.imagePath; let i = index" class="carousel-item" [class.active]="i === 0">
+                                <img [src]="img" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">{{tele.name}}</h4> 
+                </div>
+                <h5 class="card-price">{{tele?.price?.currency}}&nbsp;{{tele?.price?.amount}}</h5>
+            </div>
+           
+        </div>
+    </div>
+</div>
+<div class="category-holder2 p-2 mt-4 ">
+    <div class="d-flex InBetween mt-4 ">
+        <div class="text-holder">
+            <h5>Laptops</h5>
+        </div>
+        <button type="button" class="btn btn-outline-primary btn-head-card mb-3 ">
+            Shop now
+        </button>
+    </div>
+    <div class="d-flex product-card-container">
+        <div class="d-flex cards-container">
+            <div *ngFor="let lap of Laptops" class="container-fluid product-holder m-3">
+
+                <div class="container-fluid card-image-holder">
+                    <div id="carouselExampleIndicators" class="carousel slide">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div *ngFor="let img of lap.imagePath; let i = index" class="carousel-item" [class.active]="i === 0">
+                                <img [src]="img" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">{{lap.name}}</h4> 
+                </div>
+                <h5 class="card-price">{{lap?.price?.currency}}&nbsp;{{lap?.price?.amount}}</h5>
+            </div>
+           
+        </div>
+    </div>
+</div>
+<div class="category-holder4 p-2 mt-4 ">
+    <div class="d-flex InBetween mt-4 ">
+        <div class="text-holder">
+            <h5>Werable Devices</h5>
+        </div>
+        <button type="button" class="btn btn-outline-primary btn-head-card mb-3 ">
+            Shop now
+        </button>
+    </div>
+    <div class="d-flex product-card-container">
+        <div class="d-flex cards-container">
+            <div *ngFor="let wer of werables" class="container-fluid product-holder m-3">
+
+                <div class="container-fluid card-image-holder">
+                    <div id="carouselExampleIndicators" class="carousel slide">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div *ngFor="let img of wer.imagePath; let i = index" class="carousel-item" [class.active]="i === 0">
+                                <img [src]="img" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">{{wer.name}}</h4> 
+                </div>
+                <h5 class="card-price">{{wer?.price?.currency}}&nbsp;{{wer?.price?.amount}}</h5>
+            </div>
+           
+        </div>
+    </div>
+</div>
